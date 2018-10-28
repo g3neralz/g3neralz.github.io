@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Artifact Pairs</title>
+  
+  <script src="js/pairs.js"></script>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+  <!--<![endif]-->
+  <link rel="stylesheet" type="text/css" href="css/artifact.css">
+</head>
+<body onload="loadPairsGame();">
+  <div class="nav-main-container">
+    <div class="nav-container-menu pure-menu pure-menu-horizontal">
+      <a class="pure-menu-heading" href="#">ARTIFACT GAMES</a>
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="pairs.html" class="pure-menu-link">PAIRS</a></li>
+        <li class="pure-menu-item"><a href="mana.html" class="pure-menu-link">MANA COST</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrapper">
+    <h2>Hero Pairs Game</h2>
+    <p class="timer"><span id="minutes">00</span>:<span id="seconds">00</span>:<span id="tens">00</span></p>
+    <p><button class="pure-button" onclick="restart()"><i class="fas fa-redo-alt"></i> Restart</button></p>
+    <div id="container">
+
+    </div>
+  </div>  
+</body>
+</html>

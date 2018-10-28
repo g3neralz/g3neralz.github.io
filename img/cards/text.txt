@@ -1,0 +1,59 @@
+./green/creeps
+roseleaf_druid, vhoul_martyr, thunderhide_pack, rebel_decoy, champion_of_the_ancient, savage_wolf, roseleaf_rejuvenator, smeevil_blacksmith, satyr_duelist, thunderhide_alpha, revtel_convoy, emissary_of_the_quorum, selfish_cleric, prowler_vanguard
+
+./green/improvements
+verdant_refuge, altar_of_the_mad_moon, selemenes_favor, unearthed_secrets, path_of_the_dreamer, mist_of_avernus, homefield_advantage
+
+./green/heroes
+rix, fahrvhan_the_dreamer, omniknight, treant_protector, chen, lycan, drow_ranger, dark_seer, magnus, enchantress, viper, abaddon
+
+./green/spells
+hand_of_god, aphotic_shield, corrosive_mist, defensive_bloom, iron_branch_protection, allseeing_ones_favor, rumusque_blessing, restoration_effort, truth_to_power, intimidation, stars_align, ion_shell, divine_purpose, act_of_defiance, viper_strike, empower
+
+
+./blue/creeps
+troll_soothsaye, satyr_magician, relentless_zombie
+
+
+./blue/improvements
+messenger_rookery, aghanims_sanctum, howling_mind, path_of_the_wise, glyph_of_confusion, barracks, conflagration
+
+
+./blue/heroes
+earthshaker, ogre_magi, crystal_maiden, outworld_devourer, meepo, luna, prellex, kanna, jmuy_the_wise, zeus, skywrath_mage, venomancer
+
+
+
+./blue/spells
+remote_detonation, battlefield_control, strafing_run, bolt_of_damocles, and_one_for_me, friendly_fire, foresight, tower_barrage, lightning_strike, mystic_flare, thunder_gods_wrath, sow_venom, prey_on_the_weak, compel, better_late_than_never, cunning_plan, diabolic_revelation, frostbite, echo_slam, dimensional_portal, annihilation, ventriloquy, buying_time, wrath_of_gold, eclipse, divided_we_stand
+
+
+./red/creeps
+keenfolk_golem, hellbear_crippler, ogre_corpse_tosser, bronze_legionnaire, cursed_satyr, mercenary_exiles, rebel_instigator, red_mist_pillager, smeevil_armsmaster, legion_standard_bearer, ogre_conscript
+
+./red/improvements
+the_omexe_arena, temple_of_war, burning_oil, steel_reinforcement, path_of_the_bold, grand_melee, nether_ward
+
+./red/heroes
+bristleback, tidehunter, beastmaster, mazzie, sven, axe, keefe_the_bold, pugna, legion_commander, timbersaw, centaur_warrunner, ursa
+
+./red/spells
+clear_the_deck, new_orders, sucker_punch, fight_through_the_pain, fighting_instinct, smash_their_defenses, viscous_nasal_goo, berserkers_call, heroic_resolve, kraken_shell, double_edge, time_of_triumph, spring_the_trap, poised_to_strike, duel, combat_training, rising_anger, spot_weakness, rend_armor, primal_roar, enough_magic, pick_a_fight, enrage
+
+
+./artifact.png
+./text.txt
+
+./black/creeps
+ravenous_mass, assassins_apprentice, untested_grunt, disciple_of_nevermore, sister_of_the_veil, tyler_estate_censor, oglodi_vandal
+
+./black/improvements
+escape_route, path_of_the_cunning, assault_ladders, assured_destruction, the_oath, keenfolk_turret, revtel_investments, the_tyler_estate, iron_fog_goldmine, steam_cannon, unsupervised_artillery, bitter_enemies
+
+./black/heroes
+lich, lion, sorla_khan, winter_wyvern, bloodseeker, storm_spirit, riley_the_cunning, sniper, bounty_hunter, phantom_assassin, necrophos
+
+
+./black/spells
+lodestone_demolition, assassinate, chain_frost, forward_charge, the_cover_of_night, grazing_shot, gank, winters_curse, mana_drain, slay, payday, collateral_damage, track, no_accident, murder_plot, pick_off, blood_rage, heartstopper_aura, coordinated_assault, dirty_deeds, arcane_censure, hip_fire, coup_de_grace, relentless_pursuit
+

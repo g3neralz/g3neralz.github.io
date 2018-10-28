@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Artifact Mana</title>
+  
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/mana.js"></script>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="css/artifact.css">
+</head>
+<body>
+  <div class="nav-main-container">
+    <div class="nav-container-menu pure-menu pure-menu-horizontal">
+      <a class="pure-menu-heading" href="#">ARTIFACT GAMES</a>
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="pairs.html" class="pure-menu-link">PAIRS</a></li>
+        <li class="pure-menu-item"><a href="mana.html" class="pure-menu-link">MANA COST</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrapper">
+    <h2>Mana Cost Mini-Game</h2>
+    <br>
+    <table class="pure-table pure-table-bordered" align="center">
+      <thead>
+        <tr>
+          <th>Correct <i class="fas fa-check"></i></th>
+          <th>Wrong <i class="fas fa-times"></i></th>
+          <th>Revealed <i class="far fa-lightbulb"></i></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="correct">0</td>
+          <td id="wrong">0</td>
+          <td id="revealed">0</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <p id="responseText">Type the Mana Cost of the Following Card:</p>
+    <br>
+    <form class="pure-form" method="POST">
+      <input type="number" name="mana" placeholder="Mana Cost" id="mana" onkeydown="return enterPressed(event);">
+      <input type="button" value="Submit" class="pure-button" id="submitBtn" onclick="checkAnswer();return false;">
+      <input type="button" value="Reveal" class="pure-button" id="revealBtn" onclick="revealMana();return false;">
+      <input type="button" value="Next" class="pure-button" onclick="nextCard();return false;">
+    </form>
+    <br>
+    <div id="mana-container">
+      <img id="sparkle" class="sparkle" src="img/sparkle.png">
+    </div>
+  </div>  
+</body>
+</html>

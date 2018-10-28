@@ -1,0 +1,367 @@
+/* Variables */  
+$orange: #ffa600;
+$green: #c1d72e;
+$blue: #82d2e5;
+$grey: #f3f3f3;
+$white: #fff;
+$base-color: $blue;
+
+
+/* Mixin's */  
+@mixin transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin corners ($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius; 
+  -khtml-border-radius: $radius; 
+}
+
+/*********************** 
+  ===   Common CSS   ===
+************************/ 
+body {
+  background-color: #000000;
+}
+
+h2 {
+  color: #D6B600;
+  letter-spacing: 2px;
+}
+
+input {
+  color:black;
+}
+
+.wrapper {
+  color: white;
+  text-align: center;
+}
+
+/*********************** 
+  ===   Navigation   ===
+************************/
+.nav-main-container {
+  height: 78px;
+  background-color: #383838;
+  border-bottom: 3px solid #D6B600;
+}
+
+.nav-container-menu {
+  margin: 0 auto;
+  width: 70%;
+  height: 78px;
+}
+
+.nav-container-menu ul {
+  float:right;
+}
+
+.nav-container-menu a {
+  color: white;
+  padding: 30px 15px;
+  letter-spacing: 2px;
+}
+
+.pure-menu-link:hover {
+  background-color: darkgray;
+}
+
+/*********************** 
+  ===   PAIR CARDS   ===
+************************/
+.timer {
+  font-size:2em;
+}
+
+#container {
+  width: 1000px;
+  margin: 10px auto;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+[data-view="card"] {
+  transform: rotateY(180deg);
+  width: 176px;
+  height: 300px;
+  border: solid 1px #d3cece;
+  border-radius: 5px;
+  float: left;
+  margin: 10px;
+  cursor: pointer;
+  background: url("../img/cards/artifact.png") left center no-repeat #fff;
+  background-size: 176px 300px;
+}
+
+.flipped {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+.reverse {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(180deg);
+}
+
+.correct {
+  opacity: .5;
+  cursor: default;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+/*********************** 
+  ===   MANA COST    ===
+************************/
+#responseText {
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: bold;
+  font-size: larger;
+}
+.correct {
+  color: lightgreen;
+  text-decoration: underline;
+}
+.wrong {
+  color: red;
+  text-decoration: underline;
+}
+
+#mana-container {
+  position: relative;
+  width: 235px;
+  margin: 0 auto; 
+}
+
+[data-view="mana-card"] {
+  width: 235px;
+  height: 400px;
+  border: solid 1px #d3cece;
+  border-radius: 5px;
+  float: left;
+  margin: 10px;
+  z-index: 1;
+}
+
+.sparkle {
+  position: absolute;
+  z-index: 2;
+  left: -28px;
+  top: -28px;
+  width: 120px;
+  height: 120px;
+}
+
+/* Icons */
+$cards: abaddon, chen, dark-seer, enchantress, fahrvhan-the-dreamer, lycan, magnus, omniknight, rix, treant-protector, viper, fahrvhan-the-dreamer, new-orders;
+       
+@each $card in $cards {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/heroes/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+/* Green Cards */
+$greencreeps: rampaging_hellbear, roseleaf_druid, vhoul_martyr, thunderhide_pack, rebel_decoy, champion_of_the_ancient, savage_wolf, roseleaf_rejuvenator, smeevil_blacksmith, satyr_duelist, thunderhide_alpha, revtel_convoy, emissary_of_the_quorum, selfish_cleric, prowler_vanguard;
+
+@each $card in $greencreeps {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/green/creeps/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+$greenimprovements: verdant_refuge, altar_of_the_mad_moon, selemenes_favor, unearthed_secrets, path_of_the_dreamer, mist_of_avernus, homefield_advantage, cheating_death;
+
+@each $card in $greenimprovements {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/green/improvements/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+$greenheroes: rix, fahrvhan_the_dreamer, omniknight, treant_protector, chen, lycan, drow_ranger, dark_seer, magnus, enchantress, viper, abaddon;
+
+@each $card in $greenheroes {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/green/heroes/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+
+$greenspells: divine_intervention, steal_strength, soul_of_spring, juke, gust, hand_of_god, aphotic_shield, corrosive_mist, defensive_bloom, iron_branch_protection, allseeing_ones_favor, rumusque_blessing, restoration_effort, truth_to_power, intimidation, stars_align, ion_shell, divine_purpose, act_of_defiance, viper_strike, empower, avernus_blessing, bellow, caught_unprepared, cleansing_rite, curse_of_atrophy, defend_the_weak;
+
+@each $card in $greenspells {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/green/spells/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+/* Red Cards */
+$redcreeps: stonehall_elite, marrowfell_brawler, keenfolk_golem, hellbear_crippler, ogre_corpse_tosser, bronze_legionnaire, cursed_satyr, mercenary_exiles, rebel_instigator, red_mist_pillager, smeevil_armsmaster, legion_standard_bearer, ogre_conscript;
+
+@each $card in $redcreeps {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/red/creeps/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+$redimprovements: the_omexe_arena, temple_of_war, burning_oil, steel_reinforcement, path_of_the_bold, grand_melee, nether_ward;
+
+@each $card in $redimprovements {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/red/improvements/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+$redheroes: bristleback, tidehunter, beastmaster, mazzie, sven, axe, keefe_the_bold, pugna, legion_commander, timbersaw, centaur_warrunner, ursa;
+
+@each $card in $redheroes {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/red/heroes/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+
+$redspells: whirling_death, tresdins_standards, raze, gods_strength, clear_the_deck, new_orders, sucker_punch, fight_through_the_pain, fighting_instinct, smash_their_defenses, viscous_nasal_goo, berserkers_call, heroic_resolve, kraken_shell, double_edge, time_of_triumph, spring_the_trap, poised_to_strike, duel, combat_training, rising_anger, spot_weakness, rend_armor, primal_roar, enough_magic, pick_a_fight, enrage, crippling_blow, defensive_stance;
+
+@each $card in $redspells {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/red/spells/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+
+/* Black Cards */
+$blackcreeps: ravenhook, pit_fighter_of_quoidge, horde_catapult, ravenous_mass, assassins_apprentice, untested_grunt, disciple_of_nevermore, sister_of_the_veil, tyler_estate_censor, oglodi_vandal, assassins_shadow;
+
+@each $card in $blackcreeps {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/black/creeps/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+$blackimprovements: escape_route, path_of_the_cunning, assault_ladders, assured_destruction, the_oath, keenfolk_turret, revtel_investments, the_tyler_estate, iron_fog_goldmine, steam_cannon, unsupervised_artillery, bitter_enemies;
+
+@each $card in $blackimprovements {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/black/improvements/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+$blackheroes: lich, lion, sorla_khan, winter_wyvern, bloodseeker, storm_spirit, riley_the_cunning, sniper, bounty_hunter, phantom_assassin, necrophos;
+
+@each $card in $blackheroes {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/black/heroes/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+
+$blackspells: lodestone_demolition, assassinate, chain_frost, forward_charge, the_cover_of_night, grazing_shot, gank, winters_curse, mana_drain, slay, payday, collateral_damage, track, no_accident, murder_plot, pick_off, blood_rage, heartstopper_aura, coordinated_assault, dirty_deeds, arcane_censure, hip_fire, coup_de_grace, relentless_pursuit;
+
+@each $card in $blackspells {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/black/spells/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+/* Blue Cards */
+$bluecreeps: troll_soothsayer, satyr_magician, relentless_zombie;
+
+@each $card in $bluecreeps {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/blue/creeps/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+$blueimprovements: watchtower, ignite, fractured_timeline, messenger_rookery, aghanims_sanctum, howling_mind, path_of_the_wise, glyph_of_confusion, barracks, conflagration;
+
+@each $card in $blueimprovements {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/blue/improvements/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+$blueheroes: earthshaker, ogre_magi, crystal_maiden, outworld_devourer, meepo, luna, prellex, kanna, jmuy_the_wise, zeus, skywrath_mage, venomancer;
+
+@each $card in $blueheroes {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/blue/heroes/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+
+$bluespells: whispers_of_madness, thunderstorm, thundergods_wrath, self_sabotage, rolling_storm, lost_in_time, fog_of_war, remote_detonation, battlefield_control, strafing_run, bolt_of_damocles, and_one_for_me, friendly_fire, foresight, tower_barrage, lightning_strike, mystic_flare, thunder_gods_wrath, sow_venom, prey_on_the_weak, compel, better_late_than_never, cunning_plan, diabolic_revelation, frostbite, echo_slam, dimensional_portal, annihilation, ventriloquy, buying_time, wrath_of_gold, eclipse, divided_we_stand, arcane_assault, call_the_reserves;
+
+@each $card in $bluespells {
+  .card[data-item="#{$card}"],
+  .correct[data-item="#{$card}"],
+  .flipped[data-item="#{$card}"]{
+    background:url("../img/cards/blue/spells/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+
