@@ -8,7 +8,7 @@ var cards;
 var counter = 0;
 var revealedFlag = false;
 
-$.getJSON('https://raw.githubusercontent.com/JDDelgado/JDDelgado.github.io/master/sample.json', function(data) {
+$.getJSON('https://raw.githubusercontent.com/g3neralz/g3neralz.github.io/master/data/cards.json', function(data) {
   cards = data.Cards;
   selectedCard = cards[counter];
 
