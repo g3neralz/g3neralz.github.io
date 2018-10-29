@@ -1,16 +1,15 @@
-var correct = 0;
-var wrong = 0;
-var revealed = 0;
+var correctCounter = 0;
+var wrongCounter = 0;
+var revealedCounter = 0;
 
 var selectedCard;
 var cards;
-
-var counter = 0;
+var cardPosition = 0;
 
 // Read DB (JSON) and then load a card into the website
 $.getJSON('https://raw.githubusercontent.com/g3neralz/g3neralz.github.io/master/data/cards.json', function(data) {
   cards = data.Cards;
-  selectedCard = cards[counter];
+  selectedCard = cards[cardPosition];
 
   loadCard(selectedCard);
 })
@@ -60,15 +59,15 @@ function updateResultTextAndStyle(result) {
 }
 
 function increaseCorrectCounter() {
-    document.getElementById("correct").innerHTML = ++correct;
+    document.getElementById("correct").innerHTML = ++correctCounter;
 }
 
 function increaseRevealedCounter() {
-  document.getElementById("revealed").innerHTML = ++revealed;
+  document.getElementById("revealed").innerHTML = ++revealedCounter;
 }
 
 function increaseWrongCounter() {
-  document.getElementById("wrong").innerHTML = ++wrong;
+  document.getElementById("wrong").innerHTML = ++wrongCounter;
 }
 
 function revealMana() {
@@ -91,8 +90,8 @@ function nextCard() {
   
   var cardOk = false;
   while (!cardOk) {
-    counter++
-    selectedCard = cards[counter];
+    cardPosition++
+    selectedCard = cards[cardPosition];
     cardOk = validateCard(selectedCard);
   }
 
