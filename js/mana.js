@@ -6,51 +6,14 @@ var selectedCard;
 var cards;
 
 var counter = 0;
-var revealedFlag = false;
 
+// Read DB (JSON) and then load a card into the website
 $.getJSON('https://raw.githubusercontent.com/g3neralz/g3neralz.github.io/master/data/cards.json', function(data) {
   cards = data.Cards;
   selectedCard = cards[counter];
 
   loadCard(selectedCard);
 })
-
-function checkAnswer() {
-  var manaTextfield = document.getElementById("mana");
-  var manaValue = manaTextfield.value;
-  var appendCorrect = document.getElementById("correct");
-  var appendWrong = document.getElementById("wrong");
-  var responseText = document.getElementById("responseText");
-
-  if (!manaValue) {
-    return;
-  }
-
-  if (manaValue == selectedCard.ManaCost) {
-    correct++;
-
-    appendCorrect.innerHTML = correct;
-    responseText.innerHTML = "Correct";
-    responseText.className = "correct";
-
-    nextCard();
-  }
-  else {
-    wrong++;
-
-    appendWrong.innerHTML = wrong;
-    responseText.innerHTML = "Wrong";
-    responseText.className = "wrong";
-
-    var sparkle = document.getElementById("sparkle");
-    sparkle.style.visibility = 'hidden';
-
-    disableButtons(true);
-  }
-
-  manaTextfield.value = '';
-  manaTextfield.focus();
-}
 
 function enterPressed(e) {
   if (e.keyCode == 13) {
@@ -59,50 +22,91 @@ function enterPressed(e) {
   }
 }
 
+function checkAnswer() {
+  var manaTextfield = document.getElementById("manaInput");
+  var manaValue = manaTextfield.value;
+  
+  if (!manaValue) {
+    return;
+  }
+
+  var result;
+
+  if (manaValue == selectedCard.ManaCost) {
+    increaseCorrectCounter();
+    result = "correct";
+
+    nextCard();
+  }
+  else {
+    increaseWrongCounter();
+    result = "wrong";
+
+    hideManaCost(false);
+    disableButtons(true);
+  }
+
+  updateResultTextAndStyle(result);
+
+  manaTextfield.value = '';
+  manaTextfield.focus();
+}
+
+function updateResultTextAndStyle(result) {
+  var responseText = document.getElementById("responseText");
+  responseText.innerHTML = result;
+  responseText.className = result;
+}
+
+function increaseCorrectCounter() {
+    document.getElementById("correct").innerHTML = ++correct;
+}
+
+function increaseRevealedCounter() {
+  document.getElementById("revealed").innerHTML = ++revealed;
+}
+
+function increaseWrongCounter() {
+  document.getElementById("wrong").innerHTML = ++wrong;
+}
+
+
 function revealMana() {
-  var sparkle = document.getElementById("sparkle");
-  sparkle.style.visibility = 'hidden';
-
-  var appendRevealed = document.getElementById("revealed");
-  revealed++;
-  appendRevealed.innerHTML = revealed;
-
-  revealedFlag = true;
-
+  hideManaCost(false);
+  increaseRevealedCounter();
   disableButtons(true);
 }
 
 function disableButtons(disabled) {
-  var input = document.getElementById("mana");
-  input.disabled = disabled;
-
-  input = document.getElementById("submitBtn");
-  input.disabled = disabled;
-
-  input = document.getElementById("revealBtn");
-  input.disabled = disabled;
+  document.getElementById("manaInput").disabled = disabled;
+  document.getElementById("submitBtn").disabled = disabled;
+  document.getElementById("revealBtn").disabled = disabled;
 }
 
 function nextCard() {
-  var sparkle = document.getElementById("sparkle");
-  sparkle.style.visibility = 'visible';
+  hideManaCost(true);
 
-
-  var elem = document.querySelector('#mana-card');
-  elem.parentNode.removeChild(elem);
-
+  removeCardFromUI();
+  
   var cardOk = false;
   while (!cardOk) {
     counter++
     selectedCard = cards[counter];
     cardOk = validateCard(selectedCard);
   }
-
-  loadCard(selectedCard);
-
+  
   disableButtons(false);
+  loadCard(selectedCard);
+  clearAndFocusManaInput();
+}
 
-  var manaTextfield = document.getElementById("mana");
+function removeCardFromUI() {
+  var elem = document.querySelector('#mana-card');
+  elem.parentNode.removeChild(elem);
+}
+
+function clearAndFocusManaInput() {
+  var manaTextfield = document.getElementById("manaInput");
   manaTextfield.value = '';
   manaTextfield.focus();
 }
@@ -129,4 +133,13 @@ function loadCard(selectedCard) {
   cardDiv.className = "card";
 
   manaContainer.appendChild(cardDiv);
+}
+
+function hideManaCost(hideManaCost) {
+  if (hideManaCost) {
+    document.getElementById("sparkle").style.visibility = 'visible'
+  }
+  else {
+    document.getElementById("sparkle").style.visibility = 'hidden';
+  }
 }

@@ -47,7 +47,7 @@
     <p id="responseText">Type the Mana Cost of the Following Card:</p>
     <br>
     <form class="pure-form" method="POST">
-      <input type="number" name="mana" placeholder="Mana Cost" id="mana" onkeydown="return enterPressed(event);">
+      <input type="number" name="mana" placeholder="Mana Cost" id="manaInput" onkeydown="return enterPressed(event);">
       <input type="button" value="Submit" class="pure-button" id="submitBtn" onclick="checkAnswer();return false;">
       <input type="button" value="Reveal" class="pure-button" id="revealBtn" onclick="revealMana();return false;">
       <input type="button" value="Next" class="pure-button" onclick="nextCard();return false;">
