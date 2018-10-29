@@ -44,6 +44,7 @@ function checkAnswer() {
 
     hideManaCost(false);
     disableButtons(true);
+    focusNextButton();
   }
 
   updateResultTextAndStyle(result);
@@ -70,11 +71,11 @@ function increaseWrongCounter() {
   document.getElementById("wrong").innerHTML = ++wrong;
 }
 
-
 function revealMana() {
   hideManaCost(false);
   increaseRevealedCounter();
   disableButtons(true);
+  focusNextButton();
 }
 
 function disableButtons(disabled) {
@@ -94,7 +95,7 @@ function nextCard() {
     selectedCard = cards[counter];
     cardOk = validateCard(selectedCard);
   }
-  
+
   disableButtons(false);
   loadCard(selectedCard);
   clearAndFocusManaInput();
@@ -109,6 +110,10 @@ function clearAndFocusManaInput() {
   var manaTextfield = document.getElementById("manaInput");
   manaTextfield.value = '';
   manaTextfield.focus();
+}
+
+function focusNextButton() {
+  document.getElementById("nextBtn").focus();
 }
 
 function validateCard(selectedCard) {
