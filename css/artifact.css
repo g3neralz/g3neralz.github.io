@@ -126,6 +126,33 @@ input {
   width: 120px;
   height: 120px;
 }
+.colorBtns {
+  height: 40px;
+  width: 40px;
+  border-width: 0px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.8);
+}
+.blueBtn {
+  background-color: #204d68;
+}
+.redBtn {
+  background-color: #732b34;
+}
+.greenBtn {
+  background-color: #475f36;
+}
+.blackBtn {
+  background-color: #393338;
+}
+.selected {
+  filter: brightness(150%);
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.8);
+}
 /* Icons */
 .card[data-item="abaddon"], .correct[data-item="abaddon"], .flipped[data-item="abaddon"] {
   background: url("../img/cards/heroes/abaddon.jpg") left center no-repeat #fff;

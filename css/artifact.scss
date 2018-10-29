@@ -167,6 +167,39 @@ input {
   height: 120px;
 }
 
+.colorBtns {
+  height: 40px;
+  width: 40px;
+  border-width: 0px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(255,255,255,0.8);
+  -moz-box-shadow: 0px 0px 1px 1px rgba(255,255,255,0.8);
+  box-shadow: 0px 0px 1px 1px rgba(255,255,255,0.8); 
+}
+
+.blueBtn {
+  background-color: rgb(32, 77, 104);
+}
+
+.redBtn {
+  background-color: rgb(115, 43, 52);
+}
+
+.greenBtn {
+  background-color: rgb(71, 95, 54);
+}
+
+.blackBtn {
+  background-color: rgb(57, 51, 56);
+}
+
+.selected {
+  filter: brightness(150%);
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(255,255,255,0.8);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(255,255,255,0.8);
+  box-shadow: 0px 0px 5px 3px rgba(255,255,255,0.8);
+}
+
 /* Icons */
 $cards: abaddon, chen, dark-seer, enchantress, fahrvhan-the-dreamer, lycan, magnus, omniknight, rix, treant-protector, viper, fahrvhan-the-dreamer, new-orders;
        

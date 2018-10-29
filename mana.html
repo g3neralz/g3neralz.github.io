@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" type="text/css" href="css/artifact.css">
 </head>
-<body>
+<body onload="addEventListeners();">
   <div class="nav-main-container">
     <div class="nav-container-menu pure-menu pure-menu-horizontal">
       <a class="pure-menu-heading" href="#">ARTIFACT GAMES</a>
@@ -27,9 +27,23 @@
   <div class="wrapper">
     <h2>Mana Cost Mini-Game</h2>
     <br>
-    <table class="pure-table pure-table-bordered" align="center">
+    <table class="pure-table" align="center">
+      <thead>
+        <th colspan="4">Selected Colors</th>
+      </thead>
+      <tbody>
+        <td><button id="blueBtn" class="colorBtns blueBtn selected"></button></td>
+        <td><button id="redBtn" class="colorBtns redBtn selected"></button></td>
+        <td><button id="greenBtn" class="colorBtns greenBtn selected"></button></td>
+        <td><button id="blackBtn" class="colorBtns blackBtn selected"></button></td>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <table class="pure-table" align="center">
       <thead>
         <tr>
+          <th>Total Cards <i class="fas fa-gamepad"></i></th>
           <th>Correct <i class="fas fa-check"></i></th>
           <th>Wrong <i class="fas fa-times"></i></th>
           <th>Revealed <i class="far fa-lightbulb"></i></th>
@@ -37,6 +51,7 @@
       </thead>
       <tbody>
         <tr>
+          <td><span id="guessedCards">1</span> / <span id="totalCards">0</span></td>
           <td id="correct">0</td>
           <td id="wrong">0</td>
           <td id="revealed">0</td>
