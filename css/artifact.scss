@@ -195,10 +195,10 @@ input {
 .sparkle {
   position: absolute;
   z-index: 2;
-  left: -28px;
-  top: -28px;
-  width: 120px;
-  height: 120px;
+  left: -40px;
+  top: -45px;
+  width: 150px;
+  height: 150px;
 }
 
 .colorBtns {
@@ -232,6 +232,27 @@ input {
   -webkit-box-shadow: 0px 0px 5px 3px rgba(255,255,255,0.8);
   -moz-box-shadow: 0px 0px 5px 3px rgba(255,255,255,0.8);
   box-shadow: 0px 0px 5px 3px rgba(255,255,255,0.8);
+}
+
+/*********************** 
+ ===   GOLD COST    ===
+ ************************/
+[data-view="item-card"] {
+  width: 235px;
+  height: 400px;
+  border: solid 1px #d3cece;
+  border-radius: 5px;
+  float: left;
+  margin: 10px;
+  z-index: 1;
+}
+.item-sparkle {
+  position: absolute;
+  z-index: 2;
+  left: 90px;
+  top: 250px;
+  width: 250px;
+  height: 250px;
 }
 
 /* Icons */
@@ -374,7 +395,7 @@ $blackheroes: lich, lion, sorla_khan, winter_wyvern, bloodseeker, storm_spirit, 
 }
 
 
-$blackspells: lodestone_demolition, assassinate, chain_frost, forward_charge, the_cover_of_night, grazing_shot, gank, winters_curse, mana_drain, slay, payday, collateral_damage, track, no_accident, murder_plot, pick_off, blood_rage, heartstopper_aura, coordinated_assault, dirty_deeds, arcane_censure, hip_fire, coup_de_grace, relentless_pursuit;
+$blackspells: ball_lightning, lodestone_demolition, assassinate, chain_frost, forward_charge, the_cover_of_night, grazing_shot, gank, winters_curse, mana_drain, slay, payday, collateral_damage, track, no_accident, murder_plot, pick_off, blood_rage, heartstopper_aura, coordinated_assault, dirty_deeds, arcane_censure, hip_fire, coup_de_grace, relentless_pursuit;
 
 @each $card in $blackspells {
   .card[data-item="#{$card}"],
@@ -427,6 +448,17 @@ $bluespells: whispers_of_madness, thunderstorm, thundergods_wrath, self_sabotage
   .correct[data-item="#{$card}"],
   .flipped[data-item="#{$card}"]{
     background:url("../img/cards/blue/spells/#{$card}.jpg") left center no-repeat $white;
+    background-size: cover;
+  }
+}
+
+$items: apotheosis_blade, assasins_veil, barbed_mail, blade_of_the_vigil, blink_dagger, book_of_the_dead, bracers_of_sacrifice, broadsword, chainmail, claszureme_hourglass, claymore, cloak_of_endless_carnage, demagicking_maul, fountain_flask, fur-lined_mantle, golden_ticket, healing_salve, helm_of_the_dominator, heros_cape, horn_of_the_alpha, jasper_daggers, keenfolk_musket, keenfolk_plate, leather_armor, nyctashas_guard, obliterating_orb, phase_boots, platemail, poaching_knife, potion_of_knowledge, red_mist_maul, revtel_signet_ring, ring_of_tarrasque, ristul_emblem, rumusque_vestments, seraphim_shield, shield_of_aquila, shield_of_basilius, shivas_guard, short_sword, shop_deed, stonehall_cloak, stonehall_pike, stonehall_plate, town_portal_scroll, travelers_cloak, vesture_of_the_tyrant, wingfall_hammer;
+       
+@each $item in $items {
+  .card[data-item="#{$item}"],
+  .correct[data-item="#{$item}"],
+  .flipped[data-item="#{$item}"]{
+    background:url("../img/cards/items/#{$item}.png") left center no-repeat $white;
     background-size: cover;
   }
 }

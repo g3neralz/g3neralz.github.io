@@ -151,10 +151,10 @@ input {
 .sparkle {
   position: absolute;
   z-index: 2;
-  left: -28px;
-  top: -28px;
-  width: 120px;
-  height: 120px;
+  left: -40px;
+  top: -45px;
+  width: 150px;
+  height: 150px;
 }
 .colorBtns {
   height: 40px;
@@ -182,6 +182,26 @@ input {
   -webkit-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.8);
   -moz-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.8);
   box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.8);
+}
+/*********************** 
+ ===   GOLD COST    ===
+ ************************/
+[data-view="item-card"] {
+  width: 235px;
+  height: 400px;
+  border: solid 1px #d3cece;
+  border-radius: 5px;
+  float: left;
+  margin: 10px;
+  z-index: 1;
+}
+.item-sparkle {
+  position: absolute;
+  z-index: 2;
+  left: 90px;
+  top: 250px;
+  width: 250px;
+  height: 250px;
 }
 /* Icons */
 .card[data-item="abaddon"], .correct[data-item="abaddon"], .flipped[data-item="abaddon"] {
@@ -867,6 +887,10 @@ input {
   background: url("../img/cards/black/heroes/necrophos.jpg") left center no-repeat #fff;
   background-size: cover;
 }
+.card[data-item="ball_lightning"], .correct[data-item="ball_lightning"], .flipped[data-item="ball_lightning"] {
+  background: url("../img/cards/black/spells/ball_lightning.jpg") left center no-repeat #fff;
+  background-size: cover;
+}
 .card[data-item="lodestone_demolition"], .correct[data-item="lodestone_demolition"], .flipped[data-item="lodestone_demolition"] {
   background: url("../img/cards/black/spells/lodestone_demolition.jpg") left center no-repeat #fff;
   background-size: cover;
@@ -1202,5 +1226,197 @@ input {
 }
 .card[data-item="call_the_reserves"], .correct[data-item="call_the_reserves"], .flipped[data-item="call_the_reserves"] {
   background: url("../img/cards/blue/spells/call_the_reserves.jpg") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="apotheosis_blade"], .correct[data-item="apotheosis_blade"], .flipped[data-item="apotheosis_blade"] {
+  background: url("../img/cards/items/apotheosis_blade.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="assasins_veil"], .correct[data-item="assasins_veil"], .flipped[data-item="assasins_veil"] {
+  background: url("../img/cards/items/assasins_veil.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="barbed_mail"], .correct[data-item="barbed_mail"], .flipped[data-item="barbed_mail"] {
+  background: url("../img/cards/items/barbed_mail.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="blade_of_the_vigil"], .correct[data-item="blade_of_the_vigil"], .flipped[data-item="blade_of_the_vigil"] {
+  background: url("../img/cards/items/blade_of_the_vigil.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="blink_dagger"], .correct[data-item="blink_dagger"], .flipped[data-item="blink_dagger"] {
+  background: url("../img/cards/items/blink_dagger.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="book_of_the_dead"], .correct[data-item="book_of_the_dead"], .flipped[data-item="book_of_the_dead"] {
+  background: url("../img/cards/items/book_of_the_dead.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="bracers_of_sacrifice"], .correct[data-item="bracers_of_sacrifice"], .flipped[data-item="bracers_of_sacrifice"] {
+  background: url("../img/cards/items/bracers_of_sacrifice.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="broadsword"], .correct[data-item="broadsword"], .flipped[data-item="broadsword"] {
+  background: url("../img/cards/items/broadsword.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="chainmail"], .correct[data-item="chainmail"], .flipped[data-item="chainmail"] {
+  background: url("../img/cards/items/chainmail.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="claszureme_hourglass"], .correct[data-item="claszureme_hourglass"], .flipped[data-item="claszureme_hourglass"] {
+  background: url("../img/cards/items/claszureme_hourglass.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="claymore"], .correct[data-item="claymore"], .flipped[data-item="claymore"] {
+  background: url("../img/cards/items/claymore.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="cloak_of_endless_carnage"], .correct[data-item="cloak_of_endless_carnage"], .flipped[data-item="cloak_of_endless_carnage"] {
+  background: url("../img/cards/items/cloak_of_endless_carnage.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="demagicking_maul"], .correct[data-item="demagicking_maul"], .flipped[data-item="demagicking_maul"] {
+  background: url("../img/cards/items/demagicking_maul.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="fountain_flask"], .correct[data-item="fountain_flask"], .flipped[data-item="fountain_flask"] {
+  background: url("../img/cards/items/fountain_flask.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="fur-lined_mantle"], .correct[data-item="fur-lined_mantle"], .flipped[data-item="fur-lined_mantle"] {
+  background: url("../img/cards/items/fur-lined_mantle.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="golden_ticket"], .correct[data-item="golden_ticket"], .flipped[data-item="golden_ticket"] {
+  background: url("../img/cards/items/golden_ticket.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="healing_salve"], .correct[data-item="healing_salve"], .flipped[data-item="healing_salve"] {
+  background: url("../img/cards/items/healing_salve.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="helm_of_the_dominator"], .correct[data-item="helm_of_the_dominator"], .flipped[data-item="helm_of_the_dominator"] {
+  background: url("../img/cards/items/helm_of_the_dominator.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="heros_cape"], .correct[data-item="heros_cape"], .flipped[data-item="heros_cape"] {
+  background: url("../img/cards/items/heros_cape.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="horn_of_the_alpha"], .correct[data-item="horn_of_the_alpha"], .flipped[data-item="horn_of_the_alpha"] {
+  background: url("../img/cards/items/horn_of_the_alpha.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="jasper_daggers"], .correct[data-item="jasper_daggers"], .flipped[data-item="jasper_daggers"] {
+  background: url("../img/cards/items/jasper_daggers.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="keenfolk_musket"], .correct[data-item="keenfolk_musket"], .flipped[data-item="keenfolk_musket"] {
+  background: url("../img/cards/items/keenfolk_musket.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="keenfolk_plate"], .correct[data-item="keenfolk_plate"], .flipped[data-item="keenfolk_plate"] {
+  background: url("../img/cards/items/keenfolk_plate.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="leather_armor"], .correct[data-item="leather_armor"], .flipped[data-item="leather_armor"] {
+  background: url("../img/cards/items/leather_armor.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="nyctashas_guard"], .correct[data-item="nyctashas_guard"], .flipped[data-item="nyctashas_guard"] {
+  background: url("../img/cards/items/nyctashas_guard.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="obliterating_orb"], .correct[data-item="obliterating_orb"], .flipped[data-item="obliterating_orb"] {
+  background: url("../img/cards/items/obliterating_orb.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="phase_boots"], .correct[data-item="phase_boots"], .flipped[data-item="phase_boots"] {
+  background: url("../img/cards/items/phase_boots.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="platemail"], .correct[data-item="platemail"], .flipped[data-item="platemail"] {
+  background: url("../img/cards/items/platemail.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="poaching_knife"], .correct[data-item="poaching_knife"], .flipped[data-item="poaching_knife"] {
+  background: url("../img/cards/items/poaching_knife.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="potion_of_knowledge"], .correct[data-item="potion_of_knowledge"], .flipped[data-item="potion_of_knowledge"] {
+  background: url("../img/cards/items/potion_of_knowledge.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="red_mist_maul"], .correct[data-item="red_mist_maul"], .flipped[data-item="red_mist_maul"] {
+  background: url("../img/cards/items/red_mist_maul.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="revtel_signet_ring"], .correct[data-item="revtel_signet_ring"], .flipped[data-item="revtel_signet_ring"] {
+  background: url("../img/cards/items/revtel_signet_ring.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="ring_of_tarrasque"], .correct[data-item="ring_of_tarrasque"], .flipped[data-item="ring_of_tarrasque"] {
+  background: url("../img/cards/items/ring_of_tarrasque.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="ristul_emblem"], .correct[data-item="ristul_emblem"], .flipped[data-item="ristul_emblem"] {
+  background: url("../img/cards/items/ristul_emblem.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="rumusque_vestments"], .correct[data-item="rumusque_vestments"], .flipped[data-item="rumusque_vestments"] {
+  background: url("../img/cards/items/rumusque_vestments.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="seraphim_shield"], .correct[data-item="seraphim_shield"], .flipped[data-item="seraphim_shield"] {
+  background: url("../img/cards/items/seraphim_shield.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="shield_of_aquila"], .correct[data-item="shield_of_aquila"], .flipped[data-item="shield_of_aquila"] {
+  background: url("../img/cards/items/shield_of_aquila.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="shield_of_basilius"], .correct[data-item="shield_of_basilius"], .flipped[data-item="shield_of_basilius"] {
+  background: url("../img/cards/items/shield_of_basilius.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="shivas_guard"], .correct[data-item="shivas_guard"], .flipped[data-item="shivas_guard"] {
+  background: url("../img/cards/items/shivas_guard.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="short_sword"], .correct[data-item="short_sword"], .flipped[data-item="short_sword"] {
+  background: url("../img/cards/items/short_sword.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="shop_deed"], .correct[data-item="shop_deed"], .flipped[data-item="shop_deed"] {
+  background: url("../img/cards/items/shop_deed.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="stonehall_cloak"], .correct[data-item="stonehall_cloak"], .flipped[data-item="stonehall_cloak"] {
+  background: url("../img/cards/items/stonehall_cloak.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="stonehall_pike"], .correct[data-item="stonehall_pike"], .flipped[data-item="stonehall_pike"] {
+  background: url("../img/cards/items/stonehall_pike.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="stonehall_plate"], .correct[data-item="stonehall_plate"], .flipped[data-item="stonehall_plate"] {
+  background: url("../img/cards/items/stonehall_plate.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="town_portal_scroll"], .correct[data-item="town_portal_scroll"], .flipped[data-item="town_portal_scroll"] {
+  background: url("../img/cards/items/town_portal_scroll.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="travelers_cloak"], .correct[data-item="travelers_cloak"], .flipped[data-item="travelers_cloak"] {
+  background: url("../img/cards/items/travelers_cloak.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="vesture_of_the_tyrant"], .correct[data-item="vesture_of_the_tyrant"], .flipped[data-item="vesture_of_the_tyrant"] {
+  background: url("../img/cards/items/vesture_of_the_tyrant.png") left center no-repeat #fff;
+  background-size: cover;
+}
+.card[data-item="wingfall_hammer"], .correct[data-item="wingfall_hammer"], .flipped[data-item="wingfall_hammer"] {
+  background: url("../img/cards/items/wingfall_hammer.png") left center no-repeat #fff;
   background-size: cover;
 }
