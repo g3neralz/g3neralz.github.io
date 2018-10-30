@@ -653,7 +653,7 @@
       "Rarity": "Uncommon",
       "Color": "Red",
       "Text": "Your tower has +2 Retaliate.",
-      "ManaCost": 3,
+      "ManaCost": 1,
       "Abilities": [
         {
           "Name": "Burning Oil : Effect",
